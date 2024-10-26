@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title" >FlipMaster</h1>
+    <div class="game-info">
+        <div class="info-item">
+            <h3>Time</h3>
+            <p id="timer">00:00</p>
+        </div>
+        <div class="info-item">
+            <h3>Moves</h3>
+            <p id="moves">0</p>
+        </div>
+        <div class="info-item">
+            <h3>Score</h3>
+            <p id="score">0</p>
+        </div>
+    </div>
+
+    <div class="difficulty-selector">
+        <button onclick="setDifficulty('easy')">Easy</button>
+        <button onclick="setDifficulty('medium')">Medium</button>
+        <button onclick="setDifficulty('hard')">Hard</button>
+    </div>
+
+    <div class="game-container" id="gameContainer"></div>
+
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p id="finalScore"></p>
+            <p id="finalTime"></p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
